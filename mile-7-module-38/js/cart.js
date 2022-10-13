@@ -35,21 +35,51 @@ const addProduct = () =>{
     const quantity = getInputValueById('product-quantity-field');
     console.log(product, quantity);
     // display product on UI
-    displayProduct(product, quantity);
+    addProductToDisplay(product, quantity);
 
     // set to local storage
     // simple way
-    localStorage.setItem(product, quantity)
+    // localStorage.setItem(product, quantity)
+    saveItemToLocalStorage(product, quantity);
 
+}
+
+// cart ta ase kina jodi thake tahole show korbe r jodi na thake tahole empty object dekhabe
+const getShoppingCartFromLocalStorage = () =>{
+    let savedCart = localStorage.getItem('cart');
+    let = cart = {};
+    if(savedCart){
+        cart = JSON.parse(savedCart)
+    }
+    return cart;
 }
 
 const saveItemToLocalStorage = (product, quantity) =>{
-    
+    const cart = getShoppingCartFromLocalStorage();
+    // add product to the object as property
+    cart[product] = quantity; /* first ta property name and quantity hosse value */
+    const cartsStrigified = JSON.stringify(cart);
+
+    // save to local storage
+    localStorage.setItem('cart', cartsStrigified);
+
 }
 
-const displayProduct = (product, quantity) =>{
+const addProductToDisplay = (product, quantity) =>{
     const productContainer = document.getElementById('product-container');
     const li = document.createElement('li');
     li.innerText = `${product} : ${quantity}`;
     productContainer.appendChild(li);
 }
+
+const displayStoredProduct = () =>{
+
+    const cart = getShoppingCartFromLocalStorage();
+    for(const product in cart){
+        const quantity = cart[product];
+        console.log(product, quantity);
+        // display te show korar jonno eita 
+        addProductToDisplay(product, quantity);
+    }
+}
+displayStoredProduct();
