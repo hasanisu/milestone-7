@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Level Three</title>
+
+    <style>
+        .body-area{
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid gray;
+            height: 500px;
+            width: 600px;
+            border-radius: 20px;
+            background-color: brown;
+        }
+        .name-area{
+            margin: 25px;
+        }
+        .email-area{
+            margin: 25px;
+        }
+        .btn-dl{
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+        .btn-em {
+            margin-left: 15px;
+        }
+        .btn-nm{
+            margin-left: 15px;
+        }
+        .text-re{
+            position: relative;
+            width: 150px;
+            margin-right: 22px;
+        }
+        .col{
+            padding: 10px;
+            border-radius: 10px;
+            background-color: darkgray;
+        }
+        .bol{
+            padding: 6px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .tx{
+            position:relative;
+            margin-bottom: 50px;
+            text-align:center;
+            
+        }
+        .lebel{
+            margin-right:377px;
+            position: relative;
+        }
+        .btn-reset{
+            padding: 5px 15px 5px 15px;
+            border-radius: 5px;
+            font-size: 15px;
+            background-color:chocolate;
+        }
+    </style>
+</head>
+<body >
+    <main class="body-area">
+        <h1>Please contact me</h1>
+    <section class="name-area">
+        <label class="lebel" for="Email">Name</label><br>
+        <input id="name-area" class="bol" type="text" placeholder="Name">
+        <button class="btn-nm col">Delete Name</button>
+        <button onclick="sendNameToLocal()" class="col">Send Name</button>
+    </section>
+    <section class="email-area">
+        <label class="lebel" for="Email">Email</label><br>
+        <input class="bol" type="email" name="" id="">
+        <button class="btn-em col">Delete Email</button>
+        <button class="col">Send Email</button>
+    </section>
+    <section>
+        <label class="lebel" for="">Message</label><br>
+        <textarea class="text-re bol" name="" id="" cols="26" rows="3"></textarea>
+        <button class="btn-dl col tx">Delete Message</button>
+        <button class="col tx">Send Message</button>
+    </section>
+
+    <button class="btn-reset">Reset</button>
+    </main>
+
+
+    <script src="js/local.level-3.js"></script>
+</body>
+</html>
