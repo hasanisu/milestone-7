@@ -54,10 +54,10 @@ const getShoppingCartFromLocalStorage = () =>{
     return cart;
 }
 
-const saveItemToLocalStorage = (product, quantity) =>{
+const saveItemToLocalStorage = (products, quantitys) =>{
     const cart = getShoppingCartFromLocalStorage();
     // add product to the object as property
-    cart[product] = quantity; /* first ta property name and quantity hosse value */
+    cart[products] = quantitys; /* first ta property name and quantity hosse value */
     const cartsStrigified = JSON.stringify(cart);
 
     // save to local storage
