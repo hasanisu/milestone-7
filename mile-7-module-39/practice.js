@@ -61,3 +61,33 @@ const numbers = (num1, num2, num3) => {
 }
 const result = numbers(6 , 2 , 5);
 console.log(result);
+
+let p='Javascript'; 
+let q=p; 
+p='React'; 
+console.log(q);
+
+const isTrue='false'; 
+if(!isTrue){
+console.log('hello');
+} else {
+console.log('world'); 
+}
+
+function sum(p, q) {
+    p + q;
+   }
+   const results = sum(2, 3);
+   console.log(results);
+
+
+   if ("2" === 2) {
+    console.log("Inside if");
+   } else {
+    console.log("Inside else");
+   }
+
+   function work(x, y = 4) {
+    return x + y;
+   }
+   console.log(work(32);
