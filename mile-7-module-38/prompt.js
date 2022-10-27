@@ -34,3 +34,4 @@ const getUserInfo =()=>{
     console.log('Welcome to here', name);
     } 
 }
+
