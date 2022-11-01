@@ -17,7 +17,7 @@ ES&
 3.3 multiple parameter 
 3.4 multi line
 4. destructuring : object destructuring array destructuring
-5. object shorthand 
+5. object delcration shorthand 
 6. fuction parameter default value 
 7. optional chainig (?.)
 
@@ -34,6 +34,7 @@ Others
 2. ternary operator
 3. logical and logical or && ||
 4. JSON (stringify, parse)
+5. +,
 */
 
 const x = 50;
