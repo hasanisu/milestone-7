@@ -53,3 +53,14 @@ const newProducts = [...products, newProduct];
 // remove phone means create a new array withou the phone
 const remaining = products.filter(product =>product.name !== 'phone');
 console.log(remaining);
+
+
+
+const adventurer = { name: 'Alice',cat: {name: 'Lucy'} };
+const ratName = adventurer?.rat?.name;
+
+let person =null;
+console.log(person ? person : "person is null");
+
+const obj = {a:1};
+console.log(Object.keys(obj).length);
